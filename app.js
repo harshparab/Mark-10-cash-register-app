@@ -8,8 +8,8 @@ const availableNotes = [2000, 500, 100, 20, 10, 5, 1]
 
 checkButton.addEventListener("click", function validateBillAmountAndCashGiven() {
     hideMessage()
-    if (billAmount.value > 0) {
-        if (cashGiven.value >= billAmount.value) {
+    if (Number(billAmount.value >= 0)) {
+        if (Number(cashGiven.value) >= Number(billAmount.value)) {
             const amountToBeReturned = cashGiven.value - billAmount.value
             calculateChange(amountToBeReturned)
         } else {
@@ -35,7 +35,7 @@ function hideMessage() {
     message.style.display = "none";
 }
 
-function showMessage(msg) {
+function showMessage(text) {
     message.style.display = "block"
-    message.innerHTML = msg
+    message.innerHTML = text
 }

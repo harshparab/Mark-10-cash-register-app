@@ -1,10 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-body{
-    text-align: center;
+:root {
+    --primary-color: #111827;
+    --secondary-color: white;
 }
 
-.container{
+html {
+    margin: 0 rem;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    display: block;
+    background-color: var(--primary-color);
+}
+
+.container {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 40vw;
+    margin: auto;
+    color: var(--secondary-color);
+    margin-top: 2rem;
 }
+
+.header {
+    text-align: center;
+    font-weight: bolder;
+    padding: 3rem;
+
+    margin-bottom: 0rem;
+    margin: 0rem;
+    background-color: #374151;
+}
+
+#bill-amount {
+    margin: 2rem;
+    font-weight: bold;
+    font-size: large;
+}
+
+#cash-given {
+    margin: 2rem;
+    font-weight: bold;
+    font-size: large;
+}
+
+#check-button {
+    margin: 4rem;
+    font-weight: bold;
+    font-size: large;
+    padding: 1rem;
+    background-color: #F59E0B;
+    color: var(--secondary-color);
+}
+
+#error-message {
+    margin: 2rem;
+    font-weight: bold;
+    font-size: large;
+    color:red;
+}
+
+.table {
+    border: 1px solid #368B85;
+    width: 50%;
+    text-align: justify;
+    
+    margin: auto;
+  }
+  
+  .caption {
+      margin: 1rem 0;
+      font-size: x-large;
+      font-weight: 500;
+      
+  }
+  
+  th,
+  td {
+    border: 2px solid #368B85;
+    width: 0%;
+   
+    padding: 0.4rem;
+  }
+  
+
