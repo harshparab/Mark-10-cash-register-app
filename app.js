@@ -8,7 +8,9 @@ const availableNotes = [2000, 500, 100, 20, 10, 5, 1]
 
 checkButton.addEventListener("click", function validateBillAmountAndCashGiven() {
     hideMessage()
-    if (Number(billAmount.value >= 0)) {
+    
+
+    if (Number(billAmount.value > 0)) {
         if (Number(cashGiven.value) >= Number(billAmount.value)) {
             const amountToBeReturned = cashGiven.value - billAmount.value
             calculateChange(amountToBeReturned)
@@ -16,7 +18,7 @@ checkButton.addEventListener("click", function validateBillAmountAndCashGiven() 
             showMessage("The cash given must be atleast equal to the bill amount.")
         }
     } else {
-        showMessage("Invalid Bill Amount")
+        showMessage("Enter valid Bill Amount")
     }
 })
 
